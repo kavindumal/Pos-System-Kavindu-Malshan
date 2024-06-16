@@ -273,4 +273,3 @@ function dropItem(){
     clear(1);
     setTotal();
 }
-

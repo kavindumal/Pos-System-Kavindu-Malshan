@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,198 +8,247 @@
     text-decoration: none;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #007AFF;
+    background-color: #005BB5;
+    /* Changed color */
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
-header .sectionName{
+header .sectionName {
     color: white;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
-header ul{
+header ul {
     list-style: none;
     display: flex;
-    gap: 0vw;
+    gap: 1vw;
 }
 
-header ul li{
-    background-color: #ffff;
-    font-size: 0.5rem;
+header ul li {
+    background-color: #007AFF;
+    /* Changed color */
+    font-size: 0.75rem;
     cursor: pointer;
     font-weight: 400;
     padding: 10px 20px;
-    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-header ul li a{
-    color: #ff3737;
+header ul li:hover {
+    background-color: #003F7F;
+    /* Changed hover color */
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
-section > div{
+header ul li a {
+    color: #ffffff;
+    /* Changed text color */
+}
+
+section>div {
     display: grid;
     grid-template-columns: 35% 65%;
     font-size: 18px;
     padding: 1vw;
 }
 
-section > :first-child > div{
+section> :first-child>div {
     margin-top: 12vh;
 }
 
-.title{
+.title {
     font-size: 2rem;
     font-weight: 500;
 }
 
-form div{
+form div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     margin-top: 34px;
 }
-/* 
-#CustomerManage form div input , #CustomerManage select , #ItemManage form div input , #ItemManage select{
-    padding: 10px;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-} */
 
-form div input ,select{
+form div input,
+select {
     padding: 10px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.buttons{
+form div input:focus,
+select:focus {
+    border-color: #007AFF;
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
+}
+
+.buttons {
+    display: flex;
     flex-direction: row;
     font-size: 18px !important;
-    gap: 0;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.buttons button{
-    padding: 19px 28px;
-    border: 1px solid #c4c4c4;
+.buttons button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.buttons > :first-child{
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+.buttons> :first-child {
     background-color: #56ABF6;
 }
 
-.buttons > :nth-child(2){
+.buttons> :nth-child(2) {
     background-color: #DB3843;
 }
 
-.buttons > :nth-child(3){
+.buttons> :nth-child(3) {
     background-color: #FEBF04;
 }
 
-.buttons > :nth-child(4){
+.buttons> :nth-child(4) {
     background-color: #24A746;
 }
 
-.buttons > :last-child{
+.buttons> :last-child {
     background-color: #D43A40;
 }
 
-#CustomerManage table , #ItemManage table{
+#CustomerManage table,
+#ItemManage table {
     margin-left: 50px;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
 }
 
-#CustomerManage th , #CustomerManage td , #ItemManage th , #ItemManage td{
+#CustomerManage th,
+#CustomerManage td,
+#ItemManage th,
+#ItemManage td {
     border: 1px solid #c4c4c4;
-    width: 20vw;
-    height: 4vw;
     text-align: center;
+    padding: 12px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#CustomerManage th , #ItemManage th{
+#CustomerManage th,
+#ItemManage th {
     background-color: #DB3843;
     color: white;
 }
 
-section{
+#CustomerManage td:hover,
+#ItemManage td:hover {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+
+section {
     display: none;
 }
 
-.includeDetails{
+.includeDetails {
     border: 1px solid #000000;
     padding: 20px;
+    border-radius: 8px;
 }
 
-#OrderManage > div {
+#OrderManage>div {
     display: flex;
     justify-content: space-around;
 }
 
-#OrderManage > :first-child > div{
+#OrderManage> :first-child>div {
     margin-top: 12vh;
 }
 
-#OrderManage h1{
+#OrderManage h1 {
     font-size: 1.5rem;
     font-weight: 500;
     background-color: #24A746;
     padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
 }
 
-#OrderManage .includeDetails form div > div ,#OrderManage .includeDetails form > :last-child{
+#OrderManage .includeDetails form div>div,
+#OrderManage .includeDetails form> :last-child {
     margin-top: 0;
     margin: 10px 15px;
 }
 
-#OrderManage .includeDetails form > :first-child{
+#OrderManage .includeDetails form> :first-child {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-#OrderManage .ItemSelect form > :first-child{
+#OrderManage .ItemSelect form> :first-child {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-#OrderManage .ItemSelect form div > div , #OrderManage .ItemSelect form > :last-child{
+#OrderManage .ItemSelect form div>div,
+#OrderManage .ItemSelect form> :last-child {
     margin-top: 0;
     margin: 10px 15px;
 }
 
-#OrderManage .ItemSelect form > :nth-child(2){
+#OrderManage .ItemSelect form> :nth-child(2) {
     display: grid;
     grid-template-columns: 40% 39% 20%;
     margin: 0;
 }
 
-.ItemSelect > :last-child{
+.ItemSelect> :last-child {
     display: flex;
     justify-content: end;
 }
 
-.ItemSelect button{
+.ItemSelect button {
     padding: 10px 20px;
-    border: 1px solid #c4c4c4;
+    border: none;
     cursor: pointer;
     background-color: #D43A40;
     color: white;
-    margin-top: 30px;
-    margin-right: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.ItemSelect{
+.ItemSelect button:hover {
+    transform: scale(1.1);
+    background-color: #B32B30;
+}
+
+.ItemSelect {
     border: 1px solid #000000;
     padding: 20px;
+    border-radius: 8px;
 }
 
-#OrderManage .TotalCal h1 , .TotalCal h2{
+#OrderManage .TotalCal h1,
+.TotalCal h2 {
     background-color: transparent;
     padding: 0;
     font-size: 30px;
@@ -210,90 +259,88 @@ section{
 .TotalCal {
     border: 1px solid #000000;
     padding: 20px;
+    border-radius: 8px;
 }
 
-.TotalCal h2{
+.TotalCal h2 {
     color: #D43A40;
 }
 
-.TotalCal form > :first-child{
+.TotalCal form> :first-child {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-.TotalCal > :last-child{
+.TotalCal> :last-child {
     display: flex;
     justify-content: center;
 }
 
-.TotalCal button{
+TotalCal button {
     padding: 20px 30px;
-    border: 1px solid #c4c4c4;
+    border: none;
     cursor: pointer;
     background-color: #24A746;
     color: white;
-    margin-top: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-
-/* #OrderManage th , #OrderManage td{
-    width: 18vw;
-    height: 4vw;
-    text-align: center;
-    margin: 0;
+.TotalCal button:hover {
+    transform: scale(1.1);
+    background-color: #1F8E3C;
 }
 
-#OrderManage th{
-    background-color: #04affe;
-    color: white;
+.tableRow {
+    height: auto;
 }
 
-#OrderManage tbody{
-    width: 1vh;
-    overflow-y: scroll;
-} */
-
-.tableRow{
-   height: auto;
-}
-
-.table > div , .tableRows > div{
+.table>div,
+.tableRows>div {
     display: flex;
 }
 
-.table , .tableRows{
+.table,
+.tableRows {
     display: flex;
     flex-direction: column;
     padding: 0 5.7vw;
 }
 
-.table > div > div , .tableRows > div > div{
+.table>div>div,
+.tableRows>div>div {
     width: 18vw;
     height: 4vw;
     border: 1px solid #c4c4c4;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s, color 0.3s;
 }
-.tableRows > div > div{
+
+.tableRows>div>div {
     width: 20vw;
 }
 
-#OrderManage > :last-child{
+.tableRows>div>div:hover {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+
+#OrderManage> :last-child {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     max-height: 34vh;
 }
 
-h5{
+h5 {
     font-size: 15px;
     color: #ff4343;
     font-weight: 400;
     position: absolute;
     margin-top: 7.8vh;
 }
-
 
 .carousel {
     position: relative;
@@ -345,7 +392,7 @@ h5{
     right: 10px;
 }
 
-#homePage > div{
+#homePage>div {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -355,3 +402,40 @@ h5{
     padding: 0;
 }
 
+.home-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: #007AFF;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-button:hover {
+    background-color: #005bb5;
+    transform: scale(1.1);
+}
+
+.nav-button:active {
+    background-color: #004494;
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .home-buttons {
+        flex-direction: column;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+}

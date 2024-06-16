@@ -34,6 +34,7 @@ $('#CustomerManage .saveBtn').click(function(){
 
     if(validResult){
         saveCustomer(customer);
+        alert('Customer saved successfully!');
         refresh();
     }
 
@@ -187,6 +188,7 @@ $('#CustomerManage .updateBtn').click(function(){
         let customers = getAllCustomers();
         let index = customers.findIndex(c => c.custId === UpdateCustomer.custId);
         updateCustomer(index, UpdateCustomer);
+        alert('Customer updated successfully!');
         refresh();
     }
 
@@ -207,6 +209,7 @@ $('#CustomerManage .removeBtn').click(function(){
     let index = customers.findIndex(c => c.custId === id);
     if(index >= 0){
         deleteCustomer(index);
+        alert('Customer removed successfully!');
         refresh();
     }
     else{
@@ -225,4 +228,3 @@ $('#CustomerManage .tableRow').on('click', 'tr', function(){
     $('#CustomerManage .custAddress').val(qty);
     $('#CustomerManage .custSalary').val(price);
 });
-

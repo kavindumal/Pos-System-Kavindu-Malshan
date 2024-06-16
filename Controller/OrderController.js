@@ -274,5 +274,3 @@ function dropItem(){
     setTotal();
 }
 
-
-// $('#orderManage .itemCmb')
